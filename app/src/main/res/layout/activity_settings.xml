@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_settings"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.example.zhiyue.RSSpro.SettingsActivity">
+
+    <TextView
+        android:text="Manage list"
+        android:layout_width="match_parent"
+        android:id="@+id/textView6"
+        android:layout_height="40dp"
+        android:textStyle="normal|bold"
+        android:textSize="30sp"
+        android:layout_below="@+id/cbDate"
+        android:layout_alignParentStart="true"
+        android:textAlignment="center" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Sort Feeds/Items By"
+            android:layout_width="129dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView4"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+        <RadioGroup
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/rgpSort"
+            android:orientation="horizontal"
+            android:layout_marginTop="11dp"
+            android:checkedButton="@+id/rdoAsc">
+
+            <RadioButton
+                android:text="Newest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rdoDesc"
+                android:layout_weight="1"/>
+
+            <RadioButton
+                android:text="Oldest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rdoAsc"
+                android:layout_marginEnd="11dp" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Number Of Entries Shown (less than or equals 0 means Read All)"
+            android:layout_width="182dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView5"
+            android:textSize="16sp"
+            android:textAlignment="center" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:digits="0123456789"
+            android:ems="10"
+            android:id="@+id/etxShow"
+            android:text="0"
+            android:textAlignment="center"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Description Length"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textView"
+            android:layout_weight="0.39" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/etxDesLength"
+            android:layout_weight="0.39"
+            android:text="150" />
+    </LinearLayout>
+
+    <TextView
+        android:text="Manage Item Info"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/textView7"
+        android:textSize="30sp"
+        android:textStyle="normal|bold"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:text="Information Displayed On Feed/Item List" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:text="Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cbTitle"
+            android:checked="true"
+            android:layout_weight="1" />
+
+        <CheckBox
+            android:text="Publish Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cbDate"
+            android:checked="true"
+            android:layout_weight="1" />
+
+        <CheckBox
+            android:text="Description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cbDesc"
+            android:checked="true"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Description Font Size"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textView2"
+            android:textSize="14sp"
+            android:layout_weight="0.55"
+            android:textAlignment="center" />
+
+        <EditText
+            android:layout_width="162dp"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:digits="0123456789"
+            android:ems="10"
+            android:id="@+id/etxFontSize"
+            android:text="24"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <TextView
+        android:text="RSS News Item Description Preview."
+        android:layout_width="match_parent"
+        android:id="@+id/txtPreview"
+        android:textAlignment="center"
+        android:layout_weight="0.32"
+        android:textSize="24sp"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
